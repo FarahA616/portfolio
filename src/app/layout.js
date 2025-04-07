@@ -3,6 +3,11 @@ import "./globals.css";
 import Navbar from "../components/Navbar"; 
 import Footer from "@/components/Footer";
 
+export const metadata = {
+  title: "My Portfolio",
+  description: "Welcome to my portfolio website.",
+};
+
 const roboto = Roboto({
   weight: ["400", "700"],
   style: ["normal", "italic"],
@@ -32,7 +37,7 @@ export default function RootLayout({ children }) {
               { title: "Projects", url: "/projects" },
               { title: "Contact", url: "/contact" },
             ]}
-            year={`© ${new Date().getFullYear()} John Doe. All rights reserved.`}
+            year={`© ${new Date().getFullYear()} Farah Alabdulrazzak. All rights reserved.`}
           />
         </div>
       </body>

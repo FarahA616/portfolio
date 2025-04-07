@@ -5,6 +5,7 @@ import WorkCard from "@/components/WorkCard";
 import SkillsCard from "@/components/SkillsCard";
 import Footer from "@/components/Footer";
 
+
 export const metadata = {
   title: "Portfolio - Home",
   description: "Home page of my portfolio.",
@@ -41,21 +42,17 @@ export default function Home() {
           {/* Left side */}
           <div className="md:col-span-2">
             <Image
-              src="/profile.jpg"
+              src="/portfolio.png"
               alt="profile"
               width={128}
               height={128}
               className="rounded-full shadow-lg"
             />
-            <h1 className="text-2xl font-bold mt-4">
-              Software Engineer, Father, and Believer
+            <h1 className="text-2xl font-bold  dark:text-white mt-4">
+              Software Engineer, Wife, and a Mother
             </h1>
-            <p className="mt-2 text-gray-600">
-              With a passion for creating innovative solutions and a dedication
-              to lifelong learning, I specialize in building reliable and
-              scalable software. Whether it&#39;s crafting modern web applications
-              or tackling complex problems, I strive to deliver high-quality
-              results that make a meaningful impact.
+            <p className="mt-2 text-gray-600   dark:text-gray-300">
+             Driven by a passion for innovation and a commitment to continuous learning, I focus on creating dependable and scalable software solutions. Whether it&#39;s designing modern web applications or solving intricate challenges, I aim to deliver impactful results that not only meet expectations but also inspire. As a dedicated software engineer, a loving wife, and a proud mother, I bring a unique perspective to my work, balancing creativity, precision, and empathy to craft solutions that truly make a difference.
             </p>
 
             {/* Article Section */}
@@ -65,9 +62,9 @@ export default function Home() {
                   <time className="inline-flex items-center gap-2 font-roboto font-normal text-[14px] leading-6 tracking-[0%] text-[#A1A1AA]">
                     <span className="mr-1 text-[#A1A1AA]">|</span> {article.date}
                   </time>
-                  <h2 className="text-xl font-bold">{article.title}</h2>
-                  <div className="w-[512px] pt-2">
-                    <p className="w-[512px] font-roboto font-normal text-[14px] leading-6 tracking-[0%] text-[#52525B]">
+                  <h2 className="text-xl  dark:text-white font-bold">{article.title}</h2>
+                  <div className="w-[512px]  dark:text-gray-300 pt-2">
+                    <p className="w-[512px] font-roboto   dark:text-gray-300 font-normal text-[14px] leading-6 tracking-[0%] text-[#52525B]">
                       {article.description}
                     </p>
                   </div>

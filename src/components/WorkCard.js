@@ -1,23 +1,8 @@
 export default function WorkCard() {
-  const workHistory = [
-    {
-      logo: "/slack.svg",
-      name: "Slack",
-      title: "Software Engineer",
-      years: "2016 - Present",
-    },
-    {
-      logo: "/spotify.svg",
-      name: "Spotify",
-      title: "Frontend Engineer",
-      years: "2014 - 2015",
-    },
-  ];
-
   return (
     <div
       data-testid="workCard"
-      className="flex flex-col gap-3 p-6 border border-gray-200 dark:border-gray-700 rounded-md max-w-md shadow-md bg-white dark:bg-gray-900 text-black dark:text-white"
+      className="flex flex-col gap-3 p-6 border border-gray-200 dark:border-gray-700 rounded-md shadow-md bg-white dark:bg-gray-900 text-black dark:text-white"
     >
       <div className="flex items-center gap-3">
         <svg
@@ -42,29 +27,12 @@ export default function WorkCard() {
         <h2 className="text-xl font-bold text-gray-800 dark:text-white">Work</h2>
       </div>
 
-      <p className="text-gray-600 dark:text-gray-300 text-sm line-clamp-3">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.
+      <p className="text-gray-600 dark:text-gray-300 text-sm">
+        I haven&apos;t worked for any companies yet, as I am pursuing my degree in Software Engineering.
+        But I am looking for internships and co-op opportunities. I am also open to freelance work
+        and volunteering for open-source projects. If you are interested in working with me, please
+        contact me.
       </p>
-
-      {workHistory.map((job) => (
-        <div key={job.name} className="flex gap-2 items-start">
-          <img
-            src={job.logo}
-            alt={`${job.name} Logo`}
-            className="w-9 h-9 rounded-full p-1 border border-gray-200 dark:border-gray-700"
-            data-testid="workCardLogo"
-          />
-          <div className="flex-1">
-            <h2 className="text-base font-semibold text-gray-800 dark:text-white" data-testid="workCardCompany">
-              {job.name}
-            </h2>
-            <div className="flex justify-between items-center">
-              <p className="text-sm text-gray-500 dark:text-gray-300">{job.title}</p>
-              <span className="text-xs text-gray-400 dark:text-gray-400 whitespace-nowrap">{job.years}</span>
-            </div>
-          </div>
-        </div>
-      ))}
     </div>
   );
 }

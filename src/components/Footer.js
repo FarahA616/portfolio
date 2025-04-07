@@ -1,16 +1,23 @@
 import PropTypes from "prop-types";
-import Link from 'next/link';
+import Link from "next/link";
 
 const Footer = ({ links, year }) => {
   return (
-    <footer data-testid="footer" className="flex justify-center items-center py-4 px-20">
+    <footer
+      data-testid="footer"
+      className="flex flex-wrap justify-center items-center py-4 px-20 text-center sm:px-4"
+    >
       {/* Links on the left */}
       <ul className="flex flex-row items-center space-x-6 list-none m-0 p-0">
         {links.map((link, index) => (
           <li data-testid={`footerLink${index}`} key={index}>
-            <a href={link.url} className="text-gray-600 hover:text-gray-800 hover:underline transition-colors">
+            <Link
+              href={link.url}
+              className="text-gray-600 hover:text-gray-800 hover:underline transition-colors"
+              aria-label={`Navigate to ${link.title}`}
+            >
               {link.title}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
@@ -19,7 +26,10 @@ const Footer = ({ links, year }) => {
       <div className="flex-grow"></div>
 
       {/* Year on the right */}
-      <p data-testid="footerContent" className="text-gray-500 text-sm m-0 whitespace-nowrap">
+      <p
+        data-testid="footerContent"
+        className="text-gray-500 text-sm m-0 whitespace-nowrap"
+      >
         {year}
       </p>
     </footer>
@@ -38,6 +48,7 @@ Footer.propTypes = {
 
 Footer.defaultProps = {
   links: [],
+  
 };
 
 export default Footer;

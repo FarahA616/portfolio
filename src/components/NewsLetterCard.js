@@ -1,4 +1,12 @@
+"use client"; // Add this directive to make it a Client Component
+
 export default function NewsletterCard() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Add your form submission logic here
+    console.log("Form submitted");
+  };
+
   return (
     <div
       data-testid="newsletterCard"
@@ -26,8 +34,10 @@ export default function NewsletterCard() {
         Get notified when I publish something new, and unsubscribe at any time.
       </p>
 
-      <form className="flex">
+      <form className="flex" onSubmit={handleSubmit}>
+        <label htmlFor="email" className="sr-only">Email address</label>
         <input
+          id="email"
           type="email"
           placeholder="Email address"
           className="flex-1 rounded-l border border-gray-300 dark:border-gray-600 px-3 py-2 text-sm bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
