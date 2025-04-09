@@ -31,7 +31,7 @@ export default function Home() {
       {/* Right: Image + Links and extra sections */}
       <div className="md:w-1/3 flex flex-col items-center md:items-start text-sm text-gray-600 dark:text-gray-300">
         <Image
-          src="/ChickJoe.png"
+          src="/family.jpg"
           alt="Profile"
           width={350}
           height={350}
