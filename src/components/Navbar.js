@@ -61,12 +61,12 @@ function Navbar({ options = [] }) {
         >
           {isDarkMode ? (
             <img
-              src="/moon.svg"
+              src="../public/moon.svg"
               alt="Switch to Light Mode"
               className="w-6 h-6"
             />
           ) : (
-            <img src="/sun.svg" alt="Switch to Dark Mode" className="w-6 h-6"/>
+            <img src="../public/sun.svg" alt="Switch to Dark Mode" className="w-6 h-6"/>
           )}
         </button>
       </div>
